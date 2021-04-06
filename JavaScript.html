@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // alert('head中的js')
+        var articles = [{
+            title : "第一篇博客",
+            content : "学习html"
+        }, {
+             title : "第二篇博客",
+            content : "学习js"
+        }];
+        console.log(articles)
+        //把js对象转成字符串使用下面的方法
+        console.log(JSON.stringify(articles))
+        //函数的定义
+        function test (x, y, z){
+            console.log(x + " " + y + " " + z);
+        }
+    </script>
+<!--    <script type="application/javascript" src = "js/JavaScript.js"></script>-->
+</head>
+<!--js的执行顺序是 先 head 再引入文件 最后 body -->
+<body onload="alert('body中的js')">
+    <script>
+        //函数的使用
+        alert(test(1, 2));
+    </script>
+
+</body>
+</html>
